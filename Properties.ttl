@@ -64,7 +64,7 @@
 
 :hasPrize a rdfs:Property ;
   rdfs:domain :ChessTournament ;
-  rdfs:range wiki:Q5257307 
+  rdfs:range wiki:Q5257307 ;
   rdfs:label "Prix du tournoi";
   rdfs:comment "Prix reçu par le vainqueur du tournoi".
 
