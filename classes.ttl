@@ -8,9 +8,9 @@
 @prefix chess: <https://g33kex.github.io/ChessRDF/Chess.xml>.
 
 #-----------------------------------------Class----------------------------------------------
-:ChessTournament rdfs:subClassOfwiki :Q864897;
-rdfs:label "Tournoi d’ ́echec";
-rdfs:comment "Permet de d ́ecrire les occurrences des diff ́erents tournois d’ ́echecs".
+:ChessTournament rdfs:subClassOfwiki wiki:Q864897;
+  rdfs:label "Tournoi d'échec";
+  rdfs:comment "Permet de déécrire les occurrences des différents tournois d'échecs".
 
 :RestrictedChessTournament rdfs:subClassOf :ChessTournament.
 :WorldChessChampionship rdfs:subClassOf :RestrictedChessTournament .   
@@ -29,18 +29,12 @@ rdfs:comment "Permet de d ́ecrire les occurrences des diff ́erents tournois d�
 :FIDEWorldFischerRandomChessChampionship rdfs:subClassOf :ChessTournament .
 
 :Round a rdfs:Class ;
-rdfs:label "Round d’un tournoi".
-
-:ChessTournament :contient (:Round).
-:Round :contient :Q5257307.
+  rdfs:label "Round d’un tournoi".
 
 :Match a rdfs:Class ;
-:contient :ChessTournament;
-:contient (:Partie);
-rdfs:label "Match entre deux joueurs".
+  rdfs:label "Match entre deux joueurs".
 
-:Partie rdfs:subClassOf chess:Game ; 
-rdfs:label "Partie d’ ́echec".
-
-:Q10873124  :joue  :Match.
+:Game rdfs:subClassOf chess:Game ; 
+  rdfs:label "Partie d'échec";
+  rdfs:comment "On fait le lien avec l'ontologie du groupe de Virgile".
 
