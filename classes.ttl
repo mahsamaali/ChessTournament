@@ -1,0 +1,46 @@
+
+@prefix : <http://localhost>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>. 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>. 
+@prefix schema: <https://schema.org/>.
+@prefix wiki: <https://www.wikidata.org/wiki/>.
+@prefix foaf:<http://xmlns.com/foaf/spec/#> .
+@prefix chess: <https://g33kex.github.io/ChessRDF/Chess.xml>.
+
+#-----------------------------------------Class----------------------------------------------
+:ChessTournament rdfs:subClassOfwiki :Q864897;
+rdfs:label "Tournoi d’ ́echec";
+rdfs:comment "Permet de d ́ecrire les occurrences des diff ́erents tournois d’ ́echecs".
+
+:RestrictedChessTournament rdfs:subClassOf :ChessTournament.
+:WorldChessChampionship rdfs:subClassOf :RestrictedChessTournament .   
+:WomensWorldChessChampionship rdfs:subClassOf :RestrictedChessTournament .
+:WorldJuniorChessChampionship rdfs:subClassOf :RestrictedChessTournament. 
+:WorldYouthChessChampionship rdfs:subClassOf :RestrictedChessTournament. 
+:WorldSeniorChessChampionship rdfs:subClassOf :RestrictedChessTournament.
+
+:VariantChessTournament rdfs:subClassOf :ChessTournament.
+:WorldRapidChessChampionship rdfs:subClassOf :VariantChessTournament.
+:WorldBlitzChessChampionship rdfs:subClassOf :VariantChessTournament .
+:WorldCorrespondenceChessChampionship rdfs:subClassOf :VariantChessTournament .
+:ChessOlympiad rdfs:subClassOf :ChessTournament.
+:WorldComputerChessChampionship rdfs:subClassOf :ChessTournament .
+:WorldChessSolvingChampionship rdfs:subClassOf :ChessTournament .
+:FIDEWorldFischerRandomChessChampionship rdfs:subClassOf :ChessTournament .
+
+:Round a rdfs:Class ;
+rdfs:label "Round d’un tournoi".
+
+:ChessTournament :contient (:Round).
+:Round :contient :Q5257307.
+
+:Match a rdfs:Class ;
+:contient :ChessTournament;
+:contient (:Partie);
+rdfs:label "Match entre deux joueurs".
+
+:Partie rdfs:subClassOf chess:Game ; 
+rdfs:label "Partie d’ ́echec".
+
+:Q10873124  :joue  :Match.
+
