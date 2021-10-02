@@ -11,48 +11,86 @@
 #-----------------------------------------Properties----------------------------------------------
 
 :category a rdfs:Property ;
-rdfs:domain :ChessTournament ;
-rdfs:range rdfs:Literal ;
-rdfs:label "Cat ́egorie d’un tournoi";
-rdfs:comment "La cat ́egorie renvoie `a une certaine moyenne d’Elo n ́ecessaire pour concourir".
+  rdfs:domain :ChessTournament ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Catégorie d’un tournoi";
+  rdfs:comment "La catégorie renvoie à une certaine moyenne d’Elo nécessaire pour concourir".
 
 :year a rdfs:Property;
-rdfs:domain :ChessTournament ;
-rdfs:range schema:Date ;
-rdfs:label "Ann ́ee d’occurrence";
-rdfs:comment "Ann ́ee d’occurrence du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range schema:Date ;
+  rdfs:label "Année d’occurrence";
+  rdfs:comment "Année d’occurrence du tournoi".
 
 :hasWinner a rdfs:Property ;
-rdfs:domain :ChessTournament ;
-rdfs:range wiki:Q10873124 ;
-rdfs:label "Vainqueur";
-rdfs:comment "Vainqueur du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range wiki:Q10873124 ;
+  rdfs:label "Vainqueur";
+  rdfs:comment "Vainqueur du tournoi".
 
 :finished2nd a rdfs:Property ;
-rdfs:domain :ChessTournament ;
-rdfs:range wiki:Q10873124 ;
-rdfs:label "Joueur arriv ́e `a la seconde place";
-rdfs:comment "Joueur arriv ́e `a la seconde place du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range wiki:Q10873124 ;
+  rdfs:label "Joueur arriv é à la seconde place";
+  rdfs:comment "Joueur arrivé à la seconde place du tournoi".
 
 
 :finished3rd a rdfs:Property ;
-rdfs:domain :ChessTournament ;
-rdfs:range wiki:Q10873124 ;
-rdfs:label "Joueur arriv ́e `a la troisi`eme place";
-rdfs:comment "Joueur arriv ́e `a la troisi`eme place du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range wiki:Q10873124 ;
+  rdfs:label "Joueur arriv ́e `a la troisième place";
+  rdfs:comment "Joueur arrivé à la troisième place du tournoi".
 
 
 
 :finished4rth a rdfs:Property ;
-rdfs:domain :ChessTournament ;
-rdfs:range wiki:Q10873124 ;
-rdfs:label "Joueur arriv ́e `a la quatri`eme place";
-rdfs:comment "Joueur arriv ́e `a la quatri`eme place du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range wiki:Q10873124 ;
+  rdfs:label "Joueur arrivé à la quatrième place";
+  rdfs:comment "Joueur arrivé à la quatrième place du tournoi".
 
 
 :location rdfs:subPropertyOfschema :location ;
-rdfs:domain :ChessTournament ;
-rdfs:range schema:Place, schema:PostalAddress ; 
-rdfs:label "Lieu du tournoi";
-rdfs:comment "Lieu d’occurrence du tournoi".
+  rdfs:domain :ChessTournament ;
+  rdfs:range schema:Place, schema:PostalAddress ; 
+  rdfs:label "Lieu du tournoi";
+  rdfs:comment "Lieu d’occurrence du tournoi".
+
+:hasRound a rdfs:Property ;
+  rdfs:domain :ChessTournament ;
+  rdfs:range :Round ;
+  rdfs:label "Round ayant eu lieu lors du tournoi";
+  rdfs:comment "Round ayant eu lieu lors du tournoi".
+
+:hasPrize a rdfs:Property ;
+  rdfs:domain :ChessTournament ;
+  rdfs:range wiki:Q5257307 
+  rdfs:label "Prix du tournoi";
+  rdfs:comment "Prix reçu par le vainqueur du tournoi".
+
+:occuredDuring a rdfs:Property ;
+  rdfs:domain :Round ;
+  rdfs:range :ChessTournament ;
+  rdfs:label "Tournoi durant lequel s'est joué le round";
+  rdfs:comment "Tournoi durant lequel s'est joué le round".
+
+:hasGames a rdfs:Property;
+  rdfs:domain :Match;
+  rdfs:range (:Game);
+  rdfs:label "Liste des parties composant le match".
+
+:hasPlayed a rdfs:Property;
+  rdfs:domain :Match;
+  rdfs:range wiki:Q10873124;
+  rdfs:label "Joueur ayant disputé le Match".
+
+:playedWhites a rdfs:Property;
+  rdfs:domain :Game;
+  rdfs:range wiki:Q10873124;
+  rdfs:label "Joueur ayant joué les blancs durant la partie".
+
+:playedBlacks a rdfs:Property;
+  rdfs:domain :Game;
+  rdfs:range wiki:Q10873124;
+  rdfs:label "Joueur ayant joué les noirs durant la partie".
 
