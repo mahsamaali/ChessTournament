@@ -76,6 +76,11 @@
   rdfs:label "Tournoi durant lequel s'est joué le round";
   rdfs:comment "Tournoi durant lequel s'est joué le round".
 
+:hasMatch a rdfs:Property;
+  rdfs:domain :Round;
+  rdfs:range :Match;
+  rdfs:label "Match ayant eu lieu lors du Round".
+
 :numberOfPlayers a rdfs:Property ;
   rdfs:domain :Round ;
   rdfs:range rdfs:Literal ;
