@@ -31,6 +31,9 @@
 :Round a rdfs:Class ;
   rdfs:label "Round d’un tournoi".
 
+:FinalRound rdfs:subClassOf :Round ;
+  rdfs:label "Round final d’un tournoi".
+
 :Match a rdfs:Class ;
   rdfs:label "Match entre deux joueurs".
 
@@ -38,3 +41,5 @@
   rdfs:label "Partie d'échec";
   rdfs:comment "On fait le lien avec l'ontologie du groupe de Virgile".
 
+:ChessPlayer rdfs:subClassOf wiki:Q10873124 ;
+  rdfs:label "Joueur d'échecs participant à des tournois d'échecs".
