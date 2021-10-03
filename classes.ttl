@@ -43,3 +43,7 @@
 
 :ChessPlayer rdfs:subClassOf wiki:Q10873124 ;
   rdfs:label "Joueur d'échecs participant à des tournois d'échecs".
+
+:Prize rdfs:subClassOf wiki:Q5257307 ;
+  rdfs:label "Prix";
+  rdfs:comment "Prix gagné lors d’un tournoi".
