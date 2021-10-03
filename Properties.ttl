@@ -122,3 +122,8 @@
   rdfs:range wiki:Q5257307;
   rdfs:label "Prix gagné par le joueur".
 
+:participated a rdfs:Property ;
+  rdfs:domain :ChessPlayer ;
+  rdfs:range :ChessTournament;
+  rdfs:label "a participé à".
+
