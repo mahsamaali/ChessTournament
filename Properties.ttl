@@ -37,7 +37,7 @@
 :finished3rd a rdfs:Property ;
   rdfs:domain :ChessTournament ;
   rdfs:range wiki:Q10873124 ;
-  rdfs:label "Joueur arriv ́e `a la troisième place";
+  rdfs:label "Joueur arrivé à la troisième place";
   rdfs:comment "Joueur arrivé à la troisième place du tournoi".
 
 :finished4rth a rdfs:Property ;
@@ -48,7 +48,7 @@
 
 :location rdfs:subPropertyOfschema :location ;
   rdfs:domain :ChessTournament ;
-  rdfs:range schema:Place, schema:PostalAddress ; 
+  rdfs:range wiki:P276 ; 
   rdfs:label "Lieu du tournoi";
   rdfs:comment "Lieu d’occurrence du tournoi".
 
