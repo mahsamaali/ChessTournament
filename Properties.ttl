@@ -83,17 +83,17 @@
 
 :numberOfPlayers a rdfs:Property ;
   rdfs:domain :Round ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range rdf:XMLLiteral ;
   rdfs:label "Nombre de joueurs impliqués dans le round".
 
 :roundNumber a rdfs:Property ;
   rdfs:domain :Round ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range rdf:XMLLiteral ;
   rdfs:label "Numéro du round".
 
 :numberOfGames a rdfs:Property;
   rdfs:domain :Round;
-  rdfs:range rdfs:Literal;
+  rdfs:range rdf:XMLLiterall;
   rdfs:label "Nombre de parties jouées lors du round".
 
 :hasGames a rdfs:Property;
@@ -119,7 +119,7 @@
 
 :hasWon a rdfs:Property ;
   rdfs:domain :ChessPlayer ;
-  rdfs:range wiki:Q5257307;
+  rdfs:range :Prize;
   rdfs:label "Prix gagné par le joueur".
 
 :participated a rdfs:Property ;
@@ -127,3 +127,12 @@
   rdfs:range :ChessTournament;
   rdfs:label "a participé à".
 
+:wasDuring a rdfs:Property ;
+  rdfs:domain :Prize ;
+  rdfs:range :ChessTournament;
+  rdfs:label "Tournoi durant lequel le prix a été gagné"
+ 
+:prizeName a rdfs:Property ;
+  rdfs:domain :Prize ;
+  rdfs:range rdf:XMLLiteral;
+  rdfs:label "Nom du prix gagné".
