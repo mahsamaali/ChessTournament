@@ -88,8 +88,9 @@
 
 :hasGames a rdfs:Property;
   rdfs:domain :Match;
-  rdfs:range (:Game);
-  rdfs:label "Liste des parties composant le match".
+  rdfs:range rdf:List;
+  rdfs:label "Liste des parties composant le match";
+  rdfs:comment "La liste contient des Games".
 
 :hasPlayed a rdfs:Property;
   rdfs:domain :Match;
