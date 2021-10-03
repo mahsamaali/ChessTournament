@@ -86,6 +86,11 @@
   rdfs:range rdfs:Literal ;
   rdfs:label "Numéro du round".
 
+:numberOfGames a rdfs:Property;
+  rdfs:domain :Round;
+  rdfs:range rdfs:Literal;
+  rdfs:label "Nombre de parties jouées lors du round".
+
 :hasGames a rdfs:Property;
   rdfs:domain :Match;
   rdfs:range rdf:List;
