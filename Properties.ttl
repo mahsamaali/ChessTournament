@@ -8,7 +8,7 @@
 @prefix chess: <https://g33kex.github.io/ChessRDF/Chess.xml>.
 
 
-#-----------------------------------------Properties----------------------------------------------
+#-----------------------------------------Properties----------------------------------------------#
 
 :category a rdfs:Property ;
   rdfs:domain :ChessTournament ;
@@ -34,21 +34,17 @@
   rdfs:label "Joueur arriv é à la seconde place";
   rdfs:comment "Joueur arrivé à la seconde place du tournoi".
 
-
 :finished3rd a rdfs:Property ;
   rdfs:domain :ChessTournament ;
   rdfs:range wiki:Q10873124 ;
   rdfs:label "Joueur arriv ́e `a la troisième place";
   rdfs:comment "Joueur arrivé à la troisième place du tournoi".
 
-
-
 :finished4rth a rdfs:Property ;
   rdfs:domain :ChessTournament ;
   rdfs:range wiki:Q10873124 ;
   rdfs:label "Joueur arrivé à la quatrième place";
   rdfs:comment "Joueur arrivé à la quatrième place du tournoi".
-
 
 :location rdfs:subPropertyOfschema :location ;
   rdfs:domain :ChessTournament ;
@@ -62,6 +58,12 @@
   rdfs:label "Round ayant eu lieu lors du tournoi";
   rdfs:comment "Round ayant eu lieu lors du tournoi".
 
+:hasFinalRound rdfs:subPropertyOf :hasRound ;
+  rdfs:domain :ChessTournament ;
+  rdfs:range :FinalRound ;
+  rdfs:label "Round final du tournoi";
+  rdfs:comment "Round final du tournoi".
+
 :hasPrize a rdfs:Property ;
   rdfs:domain :ChessTournament ;
   rdfs:range wiki:Q5257307 ;
@@ -73,6 +75,16 @@
   rdfs:range :ChessTournament ;
   rdfs:label "Tournoi durant lequel s'est joué le round";
   rdfs:comment "Tournoi durant lequel s'est joué le round".
+
+:numberOfPlayers a rdfs:Property ;
+  rdfs:domain :Round ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Nombre de joueurs impliqués dans le round".
+
+:roundNumber a rdfs:Property ;
+  rdfs:domain :Round ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Numéro du round".
 
 :hasGames a rdfs:Property;
   rdfs:domain :Match;
@@ -93,4 +105,9 @@
   rdfs:domain :Game;
   rdfs:range wiki:Q10873124;
   rdfs:label "Joueur ayant joué les noirs durant la partie".
+
+:hasWon a rdfs:Property ;
+  rdfs:domain :ChessPlayer ;
+  rdfs:range wiki:Q5257307;
+  rdfs:label "Prix gagné par le joueur".
 
