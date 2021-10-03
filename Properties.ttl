@@ -46,7 +46,7 @@
   rdfs:label "Joueur arrivé à la quatrième place";
   rdfs:comment "Joueur arrivé à la quatrième place du tournoi".
 
-:location rdfs:subPropertyOfschema schema:location ;
+:tournamentLocation rdfs:subPropertyOfschema schema:location ;
   rdfs:domain :ChessTournament ;
   rdfs:range wiki:P276 ; 
   rdfs:label "Lieu du tournoi";
