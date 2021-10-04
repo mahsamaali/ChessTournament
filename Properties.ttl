@@ -117,6 +117,16 @@
   rdfs:range wiki:Q10873124;
   rdfs:label "Joueur ayant joué les noirs durant la partie".
 
+:blackPoints a rdfs:Property ;
+  rdfs:domain :Game ;
+  rdfs:range rdf:XMLLiteral ;
+  rdfs:label "Point attribue au noirs".
+
+:whitePoints a rdfs:Property ;
+  rdfs:domain :Game ;
+  rdfs:range rdf:XMLLiteral ;
+  rdfs:label "Point attribue aux blanc".
+
 :hasWon a rdfs:Property ;
   rdfs:domain :ChessPlayer ;
   rdfs:range :Prize;
