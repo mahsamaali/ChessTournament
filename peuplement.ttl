@@ -9,52 +9,52 @@
 #-----------------------------------------Peuplement----------------------------------------------#
 
 :A1 a :WomensWorldChessChampionship ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2021"ˆˆxsd:integer ;
+  :category "21ˆˆxsd:integer" ;
+  :year "2021ˆˆxsd:integer" ;
   :finished2nd :AleksandraGoryachkina ;
   :finished3rd :TanZhongyi ;
   :finished4rth :AnnaMuzychuk ;
   :hasWinner :AlexandraKosteniuk.
 
 :A2 a :WorldRapidChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2019"ˆˆxsd:integer ;
-  :finished2nd : AlirezaFirouzja ;
-  :finished3rd : HikaruNakamura ;
+  :category "21ˆxsd:integer" ;
+  :year "2019ˆxsd:integer" ;
+  :finished2nd :AlirezaFirouzja ;
+  :finished3rd :HikaruNakamura ;
   :hasWinner :MagnusCarlsen.
 
 :A3 a :WorldBlitzChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2019"ˆˆxsd:integer ;
-  :finished2nd : HikaruNakamura ;
-  :finished3rd : VladimirKramnik ;
+  :category "21ˆxsd:integer" ;
+  :year "2019ˆxsd:integer" ;
+  :finished2nd :HikaruNakamura ;
+  :finished3rd :VladimirKramnik ;
   :hasWinner :MagnusCarlsen.
 
 :A4 a :WorldBlitzChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2018"ˆˆxsd:integer ;
-  :finished2nd : JanKrzysztofDuda ;
-  :finished3rd : HikaruNakamura ;
+  :category "21ˆxsd:integer";
+  :year "2018ˆxsd:integer";
+  :finished2nd :JanKrzysztofDuda ;
+  :finished3rd :HikaruNakamura ;
   :hasWinner :MagnusCarlsen.
 
 :A5 a :WorldRapidChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2018"ˆˆxsd:integer ;
-  :finished2nd : ShakhriyarMamedyarov ;
-  :finished3rd : HikaruNakamura ;
+  :category "21ˆxsd:integer";
+  :year "2018ˆxsd:integer" ;
+  :finished2nd :ShakhriyarMamedyarov ;
+  :finished3rd :HikaruNakamura ;
   :hasWinner :DanilDubov.
 
 :A6 a :WorldChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2021"ˆˆxsd:integer ;
+  :category "21ˆxsd:integer" ;
+  :year "2021ˆxsd:integer" ;
   :finished2nd :SergeyKarjakin ;
   :finished3rd :MagnusCarlsen ;
   :finished4rth :VladimirFedoseev ;
   :hasWinner :JanKrzysztofDuda.
 
 :A7 a :WorldChessChampionShip ;
-  :category "21"ˆˆxsd:integer ;
-  :year "2019"ˆˆxsd:integer ;
+  :category "21ˆxsd:integer" ;
+  :year "2019ˆxsd:integer" ;
   :finished2nd :DingLiren ;
   :finished3rd :MaximeVachierLagrave ;
   :finished4rth :YuYangyi ;
@@ -92,28 +92,28 @@
 
 :Pr4 a :Prize ;
   :wasDuring :A3 ;
-  :prizeName ”Vainqueur".
+  :prizeName "Vainqueur".
 
 :R1 a :Round ;
   :occuredDuring :A1 ;
-  :roundNumber "1"ˆˆxsd:integer ;
-  :numberOfGames "128"ˆˆxsd:integer ;
-  :numberOfPlayers "256"ˆˆxsd:integer ;
+  :roundNumber "1ˆxsd:integer";
+  :numberOfGames "128ˆxsd:integer" ;
+  :numberOfPlayers "256ˆxsd:integer" ;
   :hasMatch :M1 ;
   :hasMatch :M2 ;
   :hasMatch :M3.
 
 :R2 a :Round ;
   :occuredDuring :A1 ;
-  :roundNumber "2"ˆˆxsd:integer ;
-  :numberOfGames "64"ˆˆxsd:integer ;
-  :numberOfPlayers "128"ˆˆxsd:integer .
+  :roundNumber "2ˆxsd:integer" ;
+  :numberOfGames "64ˆxsd:integer" ;
+  :numberOfPlayers "128ˆxsd:integer" .
 
 :R3 a :Round ;
   :occuredDuring :A1 ;
-  :roundNumber "3"ˆˆxsd:integer ;
-  :numberOfGames "32"ˆˆxsd:integer ;
-  :numberOfPlayers "64"ˆˆxsd:integer.
+  :roundNumber "3ˆxsd:integer" ;
+  :numberOfGames "32ˆxsd:integer" ;
+  :numberOfPlayers "64ˆxsd:integer".
 
 :M1 a :Match ;
   :hasPlayed :P1 ;
@@ -134,12 +134,11 @@
   :playedWhites :P1 ;
   :hasWon :P1 ;
   :playedBlacks :P3 ;
-  :blackPoints "0.5"ˆˆxsd:decimal ;
-  :whitePoints "0.5"ˆˆxsd:decimal .
+  :blackPoints "0.5ˆˆxsd:decimal" ;
+  :whitePoints "0.5ˆˆxsd:decimal" .
 
 :G2 a :Game ;
   :playedWhite :P1 ;
-  TP1:playedBlack :P2 ;
-  :blackPoints "0.0"ˆˆxsd:decimal ;
-  :whitePoints "1.0"ˆˆxsd:decimal.
-
+  :TP1:playedBlack :P2 ;
+  :blackPoints "0.0ˆˆxsd:decimal";
+  :whitePoints "1.0ˆˆxsd:decimal".
