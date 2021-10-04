@@ -1,0 +1,145 @@
+@prefix : <http://localhost>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>. 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>. 
+@prefix schema: <https://schema.org/>.
+@prefix wiki: <https://www.wikidata.org/wiki/>.
+@prefix foaf:<http://xmlns.com/foaf/spec/#> .
+@prefix chess: <https://g33kex.github.io/ChessRDF/Chess.xml>.
+
+#-----------------------------------------Peuplement----------------------------------------------#
+
+:A1 a :WomensWorldChessChampionship ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2021"ˆˆxsd:integer ;
+  :finished2nd :AleksandraGoryachkina ;
+  :finished3rd :TanZhongyi ;
+  :finished4rth :AnnaMuzychuk ;
+  :hasWinner :AlexandraKosteniuk.
+
+:A2 a :WorldRapidChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2019"ˆˆxsd:integer ;
+  :finished2nd : AlirezaFirouzja ;
+  :finished3rd : HikaruNakamura ;
+  :hasWinner :MagnusCarlsen.
+
+:A3 a :WorldBlitzChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2019"ˆˆxsd:integer ;
+  :finished2nd : HikaruNakamura ;
+  :finished3rd : VladimirKramnik ;
+  :hasWinner :MagnusCarlsen.
+
+:A4 a :WorldBlitzChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2018"ˆˆxsd:integer ;
+  :finished2nd : JanKrzysztofDuda ;
+  :finished3rd : HikaruNakamura ;
+  :hasWinner :MagnusCarlsen.
+
+:A5 a :WorldRapidChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2018"ˆˆxsd:integer ;
+  :finished2nd : ShakhriyarMamedyarov ;
+  :finished3rd : HikaruNakamura ;
+  :hasWinner :DanilDubov.
+
+:A6 a :WorldChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2021"ˆˆxsd:integer ;
+  :finished2nd :SergeyKarjakin ;
+  :finished3rd :MagnusCarlsen ;
+  :finished4rth :VladimirFedoseev ;
+  :hasWinner :JanKrzysztofDuda.
+
+:A7 a :WorldChessChampionShip ;
+  :category "21"ˆˆxsd:integer ;
+  :year "2019"ˆˆxsd:integer ;
+  :finished2nd :DingLiren ;
+  :finished3rd :MaximeVachierLagrave ;
+  :finished4rth :YuYangyi ;
+  :hasWinner :TeimourRadjabov.
+
+:TeimourRadjabov a :ChessPlayer ;
+  :hasWon :Pr1 ;
+  :participated :A2 ;
+  :participated :A3 ;
+  wiki:Q82799 "Teimour Radjabov".
+
+:DingLiren a :ChessPlayer ;
+  :hasWon :Pr2 ;
+  :participated :A3 ;
+  wiki:Q82799 "Ding Liren".
+
+:MagnusCarlsen a :ChessPlayer ;
+  :participated :A2 ;
+  :participated :A3 ;
+  :hasWon :Pr3 ;
+  :hasWon :Pr4 ;
+  wiki:Q82799 "Magnus Carlsen".
+
+:Pr1 a :Prize ;
+  :wasDuring :A7 ;
+  :prizeName "Vainqueur".
+
+:Pr2 a :Prize ;
+  :wasDuring :A7 ;
+  :prizeName "Second".
+
+:Pr3 a :Prize ;
+  :wasDuring :A4 ;
+  :prizeName "Vainqueur".
+
+:Pr4 a :Prize ;
+  :wasDuring :A3 ;
+  :prizeName ”Vainqueur".
+
+:R1 a :Round ;
+  :occuredDuring :A1 ;
+  :roundNumber "1"ˆˆxsd:integer ;
+  :numberOfGames "128"ˆˆxsd:integer ;
+  :numberOfPlayers "256"ˆˆxsd:integer ;
+  :hasMatch :M1 ;
+  :hasMatch :M2 ;
+  :hasMatch :M3.
+
+:R2 a :Round ;
+  :occuredDuring :A1 ;
+  :roundNumber "2"ˆˆxsd:integer ;
+  :numberOfGames "64"ˆˆxsd:integer ;
+  :numberOfPlayers "128"ˆˆxsd:integer .
+
+:R3 a :Round ;
+  :occuredDuring :A1 ;
+  :roundNumber "3"ˆˆxsd:integer ;
+  :numberOfGames "32"ˆˆxsd:integer ;
+  :numberOfPlayers "64"ˆˆxsd:integer.
+
+:M1 a :Match ;
+  :hasPlayed :P1 ;
+  :hasPlayed :P2 ;
+  :hasGames (:G1 :G2).
+
+:M2 a :Match ;
+  :hasPlayed :P3 ;
+  :hasPlayed :P4 ;
+  :hasGames (:G4 :G5 :G6 :G7).
+
+:M3 a :Match ;
+  :hasPlayed :P5 ;
+  :hasPlayed :P6 ;
+  :hasGames (:G8 :G9).
+
+:G1 a :Game ;
+  :playedWhites :P1 ;
+  :hasWon :P1 ;
+  :playedBlacks :P3 ;
+  :blackPoints "0.5"ˆˆxsd:decimal ;
+  :whitePoints "0.5"ˆˆxsd:decimal .
+
+:G2 a :Game ;
+  :playedWhite :P1 ;
+  TP1:playedBlack :P2 ;
+  :blackPoints "0.0"ˆˆxsd:decimal ;
+  :whitePoints "1.0"ˆˆxsd:decimal.
+
